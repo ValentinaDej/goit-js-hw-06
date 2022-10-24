@@ -1,8 +1,10 @@
+//вважаємо що допустимо вводити будь-які символи, втч пробіли
+
 const inputEl = document.querySelector("input#validation-input");
 
-//вважаємо що допустимо вводити будь-які символи втч пробіли
+inputEl.addEventListener("blur", handleinputElBlur);
 
-inputEl.addEventListener("blur", (event) => {
+function handleinputElBlur(event) {
   if (event.currentTarget.value.length === Number(inputEl.dataset.length)) {
     inputEl.classList.add("valid");
     inputEl.classList.remove("invalid");
@@ -13,4 +15,4 @@ inputEl.addEventListener("blur", (event) => {
     inputEl.classList.remove("valid");
     inputEl.classList.remove("invalid");
   }
-});
+}
