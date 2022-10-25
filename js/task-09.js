@@ -4,8 +4,9 @@ const spanColorEl = document.querySelector("span.color");
 btnChangeColorEl.addEventListener("click", handlerBtnlClick);
 
 function handlerBtnlClick() {
-  document.body.style.backgroundColor = getRandomHexColor();
-  spanColorEl.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+  document.body.style.backgroundColor = randomColor;
+  spanColorEl.textContent = randomColor;
 }
 
 function getRandomHexColor() {
